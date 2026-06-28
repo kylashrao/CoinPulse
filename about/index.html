@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About CoinPulse — Honest, Transparent Crypto Price Tracking</title>
+<meta name="description" content="CoinPulse is a free cryptocurrency price tracker that's transparent about how often its data actually refreshes.">
+<link rel="canonical" href="https://coinpulse.app/about/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%230E1117%22 stroke=%22%2310B981%22 stroke-width=%225%22/><path d=%22M20 50 L35 50 L42 30 L55 70 L62 50 L80 50%22 stroke=%22%2310B981%22 stroke-width=%226%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
+<style>
+  :root { --bg: #0E1117; --bg-elev: #161B22; --bg-elev-2: #1E2530; --accent: #10B981; --amber: #F59E0B; --text: #E6E8EB; --text-dim: #8B95A1; --border: #262E38; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  header { border-bottom: 1px solid var(--border); padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; background: rgba(14,17,23,0.92); backdrop-filter: blur(8px); }
+  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; }
+  .logo-mark { width: 26px; height: 26px; flex-shrink: 0; }
+  nav { display: flex; gap: 26px; }
+  nav a { color: var(--text-dim); font-size: 14px; font-weight: 500; text-decoration: none; }
+  nav a.active, nav a:hover { color: var(--text); }
+  @media (max-width: 760px) { nav { display: none; } }
+  .breadcrumb { max-width: 700px; margin: 20px auto 0; padding: 0 24px; font-size: 13px; color: var(--text-dim); }
+  .breadcrumb a { color: var(--text-dim); text-decoration: none; }
+  main { max-width: 700px; margin: 0 auto; padding: 24px 24px 80px; }
+  h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 4.5vw, 42px); margin-bottom: 20px; letter-spacing: -0.02em; }
+  h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin: 36px 0 14px; color: var(--text); }
+  p { color: var(--text-dim); margin-bottom: 16px; font-size: 16px; }
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0; }
+  @media (max-width: 600px) { .pillars { grid-template-columns: 1fr; } }
+  .pillar { background: var(--bg-elev); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .pillar .ic { font-size: 24px; margin-bottom: 10px; display: block; }
+  .pillar h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+  .pillar p { font-size: 13px; margin: 0; }
+  .disclaimer-box { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.25); border-radius: 10px; padding: 16px 18px; margin: 20px 0; font-size: 14px; }
+  .disclaimer-box strong { color: var(--amber); }
+  footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; color: var(--text-dim); font-size: 13px; }
+  footer a { color: var(--text-dim); margin: 0 10px; text-decoration: none; }
+  footer a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="45" fill="none" stroke="#10B981" stroke-width="6"/>
+      <path d="M20 50 L35 50 L42 30 L55 70 L62 50 L80 50" stroke="#10B981" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>CoinPulse</span>
+  </div>
+  <nav>
+    <a href="/">Dashboard</a>
+    <a href="/about/" class="active">About</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+</header>
+
+<div class="breadcrumb"><a href="/">Home</a> / About</div>
+
+<main>
+  <h1>About CoinPulse</h1>
+  <p>Most crypto price sites use the word "live" without explaining what that actually means. CoinPulse was built around a simpler idea: tell people exactly how fresh the data is, and let them decide if that's good enough for what they're doing.</p>
+  <p>We pull price data from CoinGecko's free public API, which is typically cached for one to five minutes on its end. We check for updates every 60 seconds and always display exactly when the price was last updated — not just when your browser last made a request.</p>
+
+  <div class="pillars">
+    <div class="pillar">
+      <span class="ic">🎯</span>
+      <h3>Transparent timing</h3>
+      <p>We show the real "last updated" timestamp from the data source, not a fake live indicator.</p>
+    </div>
+    <div class="pillar">
+      <span class="ic">🌍</span>
+      <h3>Multi-currency</h3>
+      <p>Prices in USD, GBP, CAD, and AUD, switchable instantly without reloading the page.</p>
+    </div>
+    <div class="pillar">
+      <span class="ic">🆓</span>
+      <h3>Free, no signup</h3>
+      <p>No account, no paywall, no limit on how many times you check a price.</p>
+    </div>
+  </div>
+
+  <h2>Where the data comes from</h2>
+  <p>All price data on CoinPulse is sourced from CoinGecko's public market data API, which aggregates pricing across a wide range of cryptocurrency exchanges. We don't operate our own price feed, hold any cryptocurrency, or have any trading relationship with the coins listed.</p>
+
+  <div class="disclaimer-box">
+    <strong>Not financial advice:</strong> CoinPulse exists to display price information clearly, not to recommend buying, selling, or holding any cryptocurrency. Prices are highly volatile. Please do your own research before making any financial decisions.
+  </div>
+
+  <h2>Get in touch</h2>
+  <p>Found a bug, have a feature idea, or just want to say hello? Reach out on the <a href="/contact/">contact page</a>.</p>
+</main>
+
+<footer>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+  <a href="/privacy/">Privacy Policy</a>
+  <div style="margin-top:14px;">© 2026 CoinPulse</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XRP (XRP) Price Today — Live USD, GBP, CAD, AUD | CoinPulse</title>
+<meta name="description" content="Live XRP (XRP) price in USD, GBP, CAD, and AUD, with 24-hour change and transparent last-updated timing.">
+<link rel="canonical" href="https://coinpulse.app/coin/xrp/">
+<meta property="og:title" content="XRP (XRP) Price — CoinPulse">
+<meta property="og:description" content="Live XRP price in USD, GBP, CAD, and AUD.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%230E1117%22 stroke=%22%2310B981%22 stroke-width=%225%22/><path d=%22M20 50 L35 50 L42 30 L55 70 L62 50 L80 50%22 stroke=%22%2310B981%22 stroke-width=%226%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://coinpulse.app/"},
+    {"@type": "ListItem", "position": 2, "name": "Bitcoin", "item": "https://coinpulse.app/coin/xrp/"}
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #0E1117; --bg-elev: #161B22; --bg-elev-2: #1E2530;
+    --accent: #10B981; --accent-dim: #0D9268; --amber: #F59E0B;
+    --green: #22C55E; --red: #EF4444;
+    --text: #E6E8EB; --text-dim: #8B95A1; --border: #262E38;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; } }
+
+  header { border-bottom: 1px solid var(--border); padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; background: rgba(14,17,23,0.92); backdrop-filter: blur(8px); z-index: 100; }
+  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; }
+  .logo-mark { width: 26px; height: 26px; flex-shrink: 0; }
+  nav { display: flex; gap: 26px; }
+  nav a { color: var(--text-dim); font-size: 14px; font-weight: 500; }
+  nav a:hover { color: var(--text); text-decoration: none; }
+  @media (max-width: 760px) { nav { display: none; } }
+
+  .breadcrumb { max-width: 800px; margin: 20px auto 0; padding: 0 24px; font-size: 13px; color: var(--text-dim); }
+  .breadcrumb a { color: var(--text-dim); }
+  .breadcrumb a:hover { color: var(--accent); }
+
+  .coin-head { max-width: 800px; margin: 0 auto; padding: 24px 24px 0; display: flex; align-items: center; gap: 14px; }
+  .coin-head h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 4vw, 32px); font-weight: 700; }
+  .coin-head .symbol-badge { background: var(--bg-elev); border: 1px solid var(--border); color: var(--text-dim); font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 8px; }
+
+  .price-card { max-width: 800px; margin: 20px auto; padding: 0 24px; }
+  .price-card-inner { background: var(--bg-elev); border: 1px solid var(--border); border-radius: 18px; padding: 32px; }
+  .big-price { font-family: 'Space Grotesk', monospace; font-size: clamp(36px, 7vw, 56px); font-weight: 700; }
+  .price-change-row { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+  .change-pill { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; padding: 5px 10px; border-radius: 7px; }
+  .change-pill.up { background: rgba(34,197,94,0.12); color: var(--green); }
+  .change-pill.down { background: rgba(239,68,68,0.12); color: var(--red); }
+  .updated-text { font-size: 13px; color: var(--text-dim); }
+
+  .currency-switch { display: flex; gap: 6px; background: var(--bg-elev-2); border: 1px solid var(--border); border-radius: 10px; padding: 4px; margin-top: 22px; width: fit-content; }
+  .cur-btn { background: transparent; border: none; color: var(--text-dim); padding: 7px 14px; border-radius: 7px; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .cur-btn.active { background: var(--accent); color: #06241A; }
+
+  .status-pill { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 16px; margin-top: 18px; }
+  .status-pill.live { background: rgba(16,185,129,0.1); color: var(--accent); }
+  .status-pill.stale { background: rgba(245,158,11,0.1); color: var(--amber); }
+  .pulse-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; animation: pulse 2s infinite; }
+  @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+
+  .ad-slot { max-width: 800px; margin: 0 auto 40px; padding: 0 24px; }
+  .ad-slot-inner { border: 1px dashed var(--border); border-radius: 10px; padding: 20px; text-align: center; color: var(--text-dim); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  .other-coins { max-width: 800px; margin: 0 auto 48px; padding: 0 24px; }
+  .other-coins h2 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; margin-bottom: 16px; }
+  .coins-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .coin-chip { background: var(--bg-elev); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; font-size: 14px; display: block; }
+  .coin-chip:hover { border-color: var(--accent); text-decoration: none; }
+
+  .info-section { max-width: 700px; margin: 0 auto 56px; padding: 0 24px; color: var(--text-dim); font-size: 15px; }
+  .info-section h2 { font-family: 'Space Grotesk', sans-serif; color: var(--text); font-size: 19px; margin-bottom: 12px; margin-top: 30px; }
+  .info-section h2:first-child { margin-top: 0; }
+  .info-section p { margin-bottom: 14px; }
+
+  footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; color: var(--text-dim); font-size: 13px; }
+  footer a { color: var(--text-dim); margin: 0 10px; }
+  footer a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="45" fill="none" stroke="#10B981" stroke-width="6"/>
+      <path d="M20 50 L35 50 L42 30 L55 70 L62 50 L80 50" stroke="#10B981" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>CoinPulse</span>
+  </div>
+  <nav>
+    <a href="/">Dashboard</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+</header>
+
+<div class="breadcrumb"><a href="/">Home</a> / XRP</div>
+
+<div class="coin-head">
+  <h1>XRP</h1>
+  <span class="symbol-badge">XRP</span>
+</div>
+
+<div class="price-card">
+  <div class="price-card-inner">
+    <div class="big-price" id="bigPrice">—</div>
+    <div class="price-change-row">
+      <span class="change-pill" id="changePill">—</span>
+      <span class="updated-text" id="updatedText">Loading...</span>
+    </div>
+    <div class="currency-switch" id="currencySwitch">
+      <button class="cur-btn active" data-cur="usd">USD</button>
+      <button class="cur-btn" data-cur="gbp">GBP</button>
+      <button class="cur-btn" data-cur="cad">CAD</button>
+      <button class="cur-btn" data-cur="aud">AUD</button>
+    </div>
+    <div class="status-pill live" id="statusPill">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      <span id="statusText">Checking for updates...</span>
+    </div>
+  </div>
+</div>
+
+<div class="ad-slot"><div class="ad-slot-inner">Advertisement</div></div>
+
+<div class="other-coins">
+  <h2>Other top cryptocurrencies</h2>
+  <div class="coins-grid">
+    <a class="coin-chip" href="/coin/bitcoin/">Bitcoin (BTC)</a>
+    <a class="coin-chip" href="/coin/ethereum/">Ethereum (ETH)</a>
+    <a class="coin-chip" href="/coin/tether/">Tether (USDT)</a>
+    <a class="coin-chip" href="/coin/bnb/">BNB (BNB)</a>
+    <a class="coin-chip" href="/coin/solana/">Solana (SOL)</a>
+    <a class="coin-chip" href="/coin/usd-coin/">USDC (USDC)</a>
+    <a class="coin-chip" href="/coin/dogecoin/">Dogecoin (DOGE)</a>
+    <a class="coin-chip" href="/coin/cardano/">Cardano (ADA)</a>
+    <a class="coin-chip" href="/coin/tron/">TRON (TRX)</a>
+  </div>
+</div>
+
+<div class="info-section">
+  <h2>About this price</h2>
+  <p>This price is sourced from CoinGecko's public market data API, which aggregates trading data across a large number of exchanges worldwide and is cached for roughly one to five minutes before updating. CoinPulse checks for new data every 60 seconds, and the "last updated" timestamp above reflects the actual freshness of the data, not just when your browser last asked for it.</p>
+  <p>This page is for informational purposes only and is not financial advice. Cryptocurrency prices are highly volatile and can change significantly in short periods of time.</p>
+</div>
+
+<footer>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+  <a href="/privacy/">Privacy Policy</a>
+  <div style="margin-top:14px;">© <span id="yearNow"></span> CoinPulse</div>
+</footer>
+
+<script>
+const COIN_ID = "ripple";
+const CURRENCY_SYMBOLS = { usd: "$", gbp: "£", cad: "CA$", aud: "AU$" };
+let currentCurrency = "usd";
+let latestCoinData = null;
+
+function formatPrice(value, currency) {
+  if (value === undefined || value === null) return "—";
+  const symbol = CURRENCY_SYMBOLS[currency] || "";
+  if (value >= 1) {
+    return symbol + value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  } else if (value >= 0.01) {
+    return symbol + value.toFixed(4);
+  } else {
+    return symbol + value.toFixed(8);
+  }
+}
+
+function formatChange(value) {
+  if (value === undefined || value === null) return { text: "—", cls: "" };
+  const sign = value >= 0 ? "+" : "";
+  return { text: `${sign}${value.toFixed(2)}% (24h)`, cls: value >= 0 ? "up" : "down" };
+}
+
+function timeAgo(unixSeconds) {
+  if (!unixSeconds) return "—";
+  const diffSec = Math.floor(Date.now() / 1000 - unixSeconds);
+  if (diffSec < 60) return `${diffSec}s ago`;
+  if (diffSec < 3600) return `${Math.floor(diffSec / 60)}m ago`;
+  return `${Math.floor(diffSec / 3600)}h ago`;
+}
+
+function renderPrice() {
+  const bigPrice = document.getElementById('bigPrice');
+  const changePill = document.getElementById('changePill');
+  const updatedText = document.getElementById('updatedText');
+
+  if (!latestCoinData) {
+    bigPrice.textContent = '—';
+    changePill.textContent = '—';
+    changePill.className = 'change-pill';
+    updatedText.textContent = 'Loading...';
+    return;
+  }
+
+  const price = latestCoinData[currentCurrency];
+  const change = latestCoinData[currentCurrency + '_24h_change'];
+  const updatedAt = latestCoinData['last_updated_at'];
+  const changeFmt = formatChange(change);
+
+  bigPrice.textContent = formatPrice(price, currentCurrency);
+  changePill.textContent = changeFmt.text;
+  changePill.className = 'change-pill ' + changeFmt.cls;
+  updatedText.textContent = 'Updated ' + timeAgo(updatedAt);
+}
+
+function setStatus(state, text) {
+  const pill = document.getElementById('statusPill');
+  const statusText = document.getElementById('statusText');
+  pill.className = 'status-pill ' + state;
+  statusText.textContent = text;
+}
+
+let coldStartRetryCount = 0;
+const COLD_START_RETRY_DELAYS = [3000, 6000, 12000];
+const RATE_LIMIT_RETRY_DELAY = 45000;
+let coldStartRetryTimeoutId = null;
+let fetchInFlight = false;
+
+async function fetchPrice() {
+  if (fetchInFlight) return;
+  fetchInFlight = true;
+
+  const url = `https://api.coingecko.com/api/v3/simple/price?ids=${COIN_ID}&vs_currencies=usd,gbp,cad,aud&include_24hr_change=true&include_last_updated_at=true`;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      const err = new Error(`API responded with status ${response.status}`);
+      err.status = response.status;
+      throw err;
+    }
+    const data = await response.json();
+    latestCoinData = data[COIN_ID];
+    coldStartRetryCount = 0;
+    if (coldStartRetryTimeoutId) {
+      clearTimeout(coldStartRetryTimeoutId);
+      coldStartRetryTimeoutId = null;
+    }
+    setStatus('live', 'Checking again in 60s');
+    renderPrice();
+  } catch (err) {
+    console.error('Price fetch failed:', err);
+    const isRateLimited = err.status === 429;
+
+    if (latestCoinData) {
+      setStatus('stale', isRateLimited
+        ? 'Rate limited — showing last known price, will resume shortly'
+        : 'Could not refresh — showing last known price');
+    } else if (isRateLimited) {
+      setStatus('stale', 'Rate limited by the price API. Trying again in 45s...');
+      if (coldStartRetryTimeoutId) clearTimeout(coldStartRetryTimeoutId);
+      coldStartRetryTimeoutId = setTimeout(fetchPrice, RATE_LIMIT_RETRY_DELAY);
+    } else {
+      if (coldStartRetryCount < COLD_START_RETRY_DELAYS.length) {
+        const delay = COLD_START_RETRY_DELAYS[coldStartRetryCount];
+        coldStartRetryCount++;
+        setStatus('stale', `Could not load price. Retrying in ${Math.round(delay / 1000)}s...`);
+        coldStartRetryTimeoutId = setTimeout(fetchPrice, delay);
+      } else {
+        setStatus('stale', 'Could not load price. Will keep trying...');
+      }
+    }
+  } finally {
+    fetchInFlight = false;
+  }
+}
+
+document.querySelectorAll('.cur-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cur-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCurrency = btn.dataset.cur;
+    renderPrice();
+  });
+});
+
+document.getElementById('yearNow').textContent = new Date().getFullYear();
+
+fetchPrice();
+setInterval(fetchPrice, 60000);
+</script>
+
+</body>
+</html>
