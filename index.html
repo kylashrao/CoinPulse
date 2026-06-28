@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CoinPulse — Live Cryptocurrency Prices in USD, GBP, CAD & AUD</title>
-<meta name="description" content="Track live cryptocurrency prices for Bitcoin, Ethereum, and more in USD, GBP, CAD, and AUD. Transparent refresh timing, no signup required.">
-<link rel="canonical" href="https://coinpulse.app/">
-<meta property="og:title" content="CoinPulse — Live Cryptocurrency Prices">
-<meta property="og:description" content="Track crypto prices in USD, GBP, CAD, and AUD with honest, transparent refresh timing.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%230E1117%22 stroke=%22%2310B981%22 stroke-width=%225%22/><path d=%22M20 50 L35 50 L42 30 L55 70 L62 50 L80 50%22 stroke=%22%2310B981%22 stroke-width=%226%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
 
-<script type="application/ld+json">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoinPulse — Live Cryptocurrency Prices in USD, GBP, CAD & AUD</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2824959172169836"
+    crossorigin="anonymous"></script>
+  <meta name="description"
+    content="Track live cryptocurrency prices for Bitcoin, Ethereum, and more in USD, GBP, CAD, and AUD. Transparent refresh timing, no signup required.">
+  <link rel="canonical" href="https://coinpulse.app/">
+  <meta property="og:title" content="CoinPulse — Live Cryptocurrency Prices">
+  <meta property="og:description"
+    content="Track crypto prices in USD, GBP, CAD, and AUD with honest, transparent refresh timing.">
+  <meta property="og:type" content="website">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%230E1117%22 stroke=%22%2310B981%22 stroke-width=%225%22/><path d=%22M20 50 L35 50 L42 30 L55 70 L62 50 L80 50%22 stroke=%22%2310B981%22 stroke-width=%226%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
+
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
@@ -24,351 +30,729 @@
 }
 </script>
 
-<style>
-  :root {
-    --bg: #0E1117; --bg-elev: #161B22; --bg-elev-2: #1E2530;
-    --accent: #10B981; --accent-dim: #0D9268; --amber: #F59E0B;
-    --green: #22C55E; --red: #EF4444;
-    --text: #E6E8EB; --text-dim: #8B95A1; --border: #262E38;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  a:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; } }
+  <style>
+    :root {
+      --bg: #0E1117;
+      --bg-elev: #161B22;
+      --bg-elev-2: #1E2530;
+      --accent: #10B981;
+      --accent-dim: #0D9268;
+      --amber: #F59E0B;
+      --green: #22C55E;
+      --red: #EF4444;
+      --text: #E6E8EB;
+      --text-dim: #8B95A1;
+      --border: #262E38;
+    }
 
-  header { border-bottom: 1px solid var(--border); padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; background: rgba(14,17,23,0.92); backdrop-filter: blur(8px); z-index: 100; }
-  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; }
-  .logo-mark { width: 26px; height: 26px; flex-shrink: 0; }
-  nav { display: flex; gap: 26px; align-items: center; }
-  nav a { color: var(--text-dim); font-size: 14px; font-weight: 500; }
-  nav a:hover { color: var(--text); text-decoration: none; }
-  @media (max-width: 760px) { nav { display: none; } }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  .hero { padding: 48px 24px 24px; max-width: 1100px; margin: 0 auto; text-align: center; }
-  h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4.6vw, 44px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; margin-bottom: 14px; }
-  h1 .accent { color: var(--accent); }
-  .hero-sub { color: var(--text-dim); font-size: 16px; max-width: 600px; margin: 0 auto; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  .status-bar { max-width: 1100px; margin: 24px auto 0; padding: 0 24px; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
-  .status-pill { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 20px; }
-  .status-pill.live { background: rgba(16,185,129,0.12); color: var(--accent); }
-  .status-pill.stale { background: rgba(245,158,11,0.12); color: var(--amber); }
-  .status-pill.error { background: rgba(239,68,68,0.12); color: var(--red); }
-  .pulse-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: pulse 2s infinite; }
-  @keyframes pulse { 0% { box-shadow: 0 0 0 0 currentColor; opacity: 1; } 70% { box-shadow: 0 0 0 6px transparent; opacity: 0.4; } 100% { opacity: 1; } }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-  .currency-switch { display: flex; gap: 6px; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 10px; padding: 4px; }
-  .cur-btn { background: transparent; border: none; color: var(--text-dim); padding: 7px 14px; border-radius: 7px; font-size: 13px; font-weight: 600; cursor: pointer; }
-  .cur-btn.active { background: var(--accent); color: #06241A; }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  .table-wrap { max-width: 1100px; margin: 32px auto; padding: 0 24px; }
-  .price-table { width: 100%; border-collapse: collapse; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-  .price-table thead th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); padding: 16px 20px; border-bottom: 1px solid var(--border); font-weight: 600; }
-  .price-table thead th.num { text-align: right; }
-  .price-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s ease; }
-  .price-table tbody tr:last-child { border-bottom: none; }
-  .price-table tbody tr:hover { background: var(--bg-elev-2); cursor: pointer; }
-  .price-table td { padding: 16px 20px; font-size: 14px; }
-  .price-table td.num { text-align: right; font-family: 'Space Grotesk', monospace; }
-  .coin-cell { display: flex; align-items: center; gap: 12px; }
-  .coin-rank { color: var(--text-dim); font-size: 12px; width: 20px; }
-  .coin-name { font-weight: 600; }
-  .coin-symbol { color: var(--text-dim); font-size: 12px; margin-left: 6px; }
-  .price-main { font-weight: 700; font-size: 15px; }
-  .change-pill { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; padding: 4px 8px; border-radius: 6px; }
-  .change-pill.up { background: rgba(34,197,94,0.12); color: var(--green); }
-  .change-pill.down { background: rgba(239,68,68,0.12); color: var(--red); }
-  .skeleton { display: inline-block; height: 14px; width: 70px; background: var(--bg-elev-2); border-radius: 4px; animation: shimmer 1.4s infinite; }
-  @keyframes shimmer { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+    a:focus-visible,
+    button:focus-visible,
+    select:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
 
-  @media (max-width: 700px) {
-    .price-table thead th.hide-mobile, .price-table td.hide-mobile { display: none; }
-  }
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
 
-  .ad-slot { max-width: 1100px; margin: 0 auto 40px; padding: 0 24px; }
-  .ad-slot-inner { border: 1px dashed var(--border); border-radius: 10px; padding: 20px; text-align: center; color: var(--text-dim); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background: rgba(14, 17, 23, 0.92);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
 
-  .info-section { max-width: 760px; margin: 0 auto 72px; padding: 0 24px; color: var(--text-dim); font-size: 15px; }
-  .info-section h2 { font-family: 'Space Grotesk', sans-serif; color: var(--text); font-size: 21px; margin-bottom: 14px; margin-top: 34px; }
-  .info-section h2:first-child { margin-top: 0; }
-  .info-section p { margin-bottom: 14px; }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+    }
 
-  footer { border-top: 1px solid var(--border); padding: 40px 24px 32px; }
-  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
-  .footer-col h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 12px; }
-  .footer-col a { display: block; color: var(--text-dim); font-size: 14px; margin-bottom: 8px; }
-  .footer-col a:hover { color: var(--text); text-decoration: none; }
-  .footer-bottom { max-width: 1100px; margin: 32px auto 0; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-  .disclaimer { max-width: 1100px; margin: 0 auto 24px; padding: 0 24px; font-size: 12px; color: var(--text-dim); text-align: center; }
-</style>
+    .logo-mark {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--text-dim);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        display: none;
+      }
+    }
+
+    .hero {
+      padding: 48px 24px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(28px, 4.6vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+      margin-bottom: 14px;
+    }
+
+    h1 .accent {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      color: var(--text-dim);
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .status-bar {
+      max-width: 1100px;
+      margin: 24px auto 0;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    .status-pill.live {
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--accent);
+    }
+
+    .status-pill.stale {
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--amber);
+    }
+
+    .status-pill.error {
+      background: rgba(239, 68, 68, 0.12);
+      color: var(--red);
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 currentColor;
+        opacity: 1;
+      }
+
+      70% {
+        box-shadow: 0 0 0 6px transparent;
+        opacity: 0.4;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .currency-switch {
+      display: flex;
+      gap: 6px;
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 4px;
+    }
+
+    .cur-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      padding: 7px 14px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .cur-btn.active {
+      background: var(--accent);
+      color: #06241A;
+    }
+
+    .table-wrap {
+      max-width: 1100px;
+      margin: 32px auto;
+      padding: 0 24px;
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .price-table thead th {
+      text-align: left;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-dim);
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 600;
+    }
+
+    .price-table thead th.num {
+      text-align: right;
+    }
+
+    .price-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s ease;
+    }
+
+    .price-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .price-table tbody tr:hover {
+      background: var(--bg-elev-2);
+      cursor: pointer;
+    }
+
+    .price-table td {
+      padding: 16px 20px;
+      font-size: 14px;
+    }
+
+    .price-table td.num {
+      text-align: right;
+      font-family: 'Space Grotesk', monospace;
+    }
+
+    .coin-cell {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .coin-rank {
+      color: var(--text-dim);
+      font-size: 12px;
+      width: 20px;
+    }
+
+    .coin-name {
+      font-weight: 600;
+    }
+
+    .coin-symbol {
+      color: var(--text-dim);
+      font-size: 12px;
+      margin-left: 6px;
+    }
+
+    .price-main {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .change-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .change-pill.up {
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--green);
+    }
+
+    .change-pill.down {
+      background: rgba(239, 68, 68, 0.12);
+      color: var(--red);
+    }
+
+    .skeleton {
+      display: inline-block;
+      height: 14px;
+      width: 70px;
+      background: var(--bg-elev-2);
+      border-radius: 4px;
+      animation: shimmer 1.4s infinite;
+    }
+
+    @keyframes shimmer {
+
+      0%,
+      100% {
+        opacity: 0.5;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .price-table thead th.hide-mobile,
+      .price-table td.hide-mobile {
+        display: none;
+      }
+    }
+
+    .ad-slot {
+      max-width: 1100px;
+      margin: 0 auto 40px;
+      padding: 0 24px;
+    }
+
+    .ad-slot-inner {
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .info-section {
+      max-width: 760px;
+      margin: 0 auto 72px;
+      padding: 0 24px;
+      color: var(--text-dim);
+      font-size: 15px;
+    }
+
+    .info-section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--text);
+      font-size: 21px;
+      margin-bottom: 14px;
+      margin-top: 34px;
+    }
+
+    .info-section h2:first-child {
+      margin-top: 0;
+    }
+
+    .info-section p {
+      margin-bottom: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-col h4 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: var(--text-dim);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .footer-col a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 32px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .disclaimer {
+      max-width: 1100px;
+      margin: 0 auto 24px;
+      padding: 0 24px;
+      font-size: 12px;
+      color: var(--text-dim);
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="logo">
-    <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
-      <circle cx="50" cy="50" r="45" fill="none" stroke="#10B981" stroke-width="6"/>
-      <path d="M20 50 L35 50 L42 30 L55 70 L62 50 L80 50" stroke="#10B981" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <span>CoinPulse</span>
-  </div>
-  <nav>
-    <a href="/">Dashboard</a>
-    <a href="/about/">About</a>
-    <a href="/contact/">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Cryptocurrency prices, <span class="accent">refreshed every minute.</span></h1>
-  <p class="hero-sub">Live data for the top 10 cryptocurrencies in US Dollars, British Pounds, Canadian Dollars, and Australian Dollars — powered by CoinGecko's public API.</p>
-</section>
-
-<div class="status-bar">
-  <span class="status-pill live" id="statusPill">
-    <span class="pulse-dot" aria-hidden="true"></span>
-    <span id="statusText">Loading prices...</span>
-  </span>
-  <div class="currency-switch" id="currencySwitch">
-    <button class="cur-btn active" data-cur="usd">USD</button>
-    <button class="cur-btn" data-cur="gbp">GBP</button>
-    <button class="cur-btn" data-cur="cad">CAD</button>
-    <button class="cur-btn" data-cur="aud">AUD</button>
-  </div>
-</div>
-
-<div class="table-wrap">
-  <table class="price-table">
-    <thead>
-      <tr>
-        <th>Coin</th>
-        <th class="num">Price</th>
-        <th class="num">24h Change</th>
-        <th class="num hide-mobile">Last Updated</th>
-      </tr>
-    </thead>
-    <tbody id="priceTableBody">
-      <!-- populated by JS -->
-    </tbody>
-  </table>
-</div>
-
-<div class="disclaimer">Prices are sourced from CoinGecko's free public API, which is cached for roughly 1–5 minutes. This is not financial advice.</div>
-
-<div class="ad-slot"><div class="ad-slot-inner">Advertisement</div></div>
-
-<div class="info-section">
-  <h2>Why we say "refreshed every minute," not "live"</h2>
-  <p>Many crypto price sites use the word "live" loosely. In practice, free-tier price data — including the data this site uses — is typically cached for one to five minutes before it updates on the data provider's end. Polling more frequently than that wouldn't give you fresher numbers; it would just waste requests. CoinPulse checks for new data every 60 seconds and always shows you exactly when the price was last updated, so you can judge its freshness yourself instead of taking "live" on faith.</p>
-
-  <h2>Where this data comes from</h2>
-  <p>Prices on CoinPulse are pulled directly from CoinGecko's public market data API, which aggregates prices across a large number of exchanges worldwide. We don't run our own price feed or hold any cryptocurrency ourselves — we simply display what CoinGecko's API reports, refreshed on the schedule described above.</p>
-
-  <h2>A note on currencies</h2>
-  <p>Switching the currency toggle changes the displayed price to US Dollars, British Pounds, Canadian Dollars, or Australian Dollars, each converted using the exchange rate CoinGecko's API provides at the time of the request.</p>
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-col">
-      <h4>Tool</h4>
+  <header>
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#10B981" stroke-width="6" />
+        <path d="M20 50 L35 50 L42 30 L55 70 L62 50 L80 50" stroke="#10B981" stroke-width="6" fill="none"
+          stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <span>CoinPulse</span>
+    </div>
+    <nav>
       <a href="/">Dashboard</a>
-    </div>
-    <div class="footer-col">
-      <h4>Top Coins</h4>
-      <a href="/coin/bitcoin/">Bitcoin</a>
-      <a href="/coin/ethereum/">Ethereum</a>
-      <a href="/coin/xrp/">XRP</a>
-      <a href="/coin/solana/">Solana</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
-      <a href="/privacy/">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Cryptocurrency prices, <span class="accent">refreshed every minute.</span></h1>
+    <p class="hero-sub">Live data for the top 10 cryptocurrencies in US Dollars, British Pounds, Canadian Dollars, and
+      Australian Dollars — powered by CoinGecko's public API.</p>
+  </section>
+
+  <div class="status-bar">
+    <span class="status-pill live" id="statusPill">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      <span id="statusText">Loading prices...</span>
+    </span>
+    <div class="currency-switch" id="currencySwitch">
+      <button class="cur-btn active" data-cur="usd">USD</button>
+      <button class="cur-btn" data-cur="gbp">GBP</button>
+      <button class="cur-btn" data-cur="cad">CAD</button>
+      <button class="cur-btn" data-cur="aud">AUD</button>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span>© <span id="yearNow"></span> CoinPulse. Not financial advice.</span>
-    <span>Data via CoinGecko API.</span>
+
+  <div class="table-wrap">
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Coin</th>
+          <th class="num">Price</th>
+          <th class="num">24h Change</th>
+          <th class="num hide-mobile">Last Updated</th>
+        </tr>
+      </thead>
+      <tbody id="priceTableBody">
+        <!-- populated by JS -->
+      </tbody>
+    </table>
   </div>
-</footer>
 
-<script>
-const COINS = [
-  { id: "bitcoin", name: "Bitcoin", symbol: "BTC", slug: "bitcoin" },
-  { id: "ethereum", name: "Ethereum", symbol: "ETH", slug: "ethereum" },
-  { id: "tether", name: "Tether", symbol: "USDT", slug: "tether" },
-  { id: "ripple", name: "XRP", symbol: "XRP", slug: "xrp" },
-  { id: "binancecoin", name: "BNB", symbol: "BNB", slug: "bnb" },
-  { id: "solana", name: "Solana", symbol: "SOL", slug: "solana" },
-  { id: "usd-coin", name: "USDC", symbol: "USDC", slug: "usd-coin" },
-  { id: "dogecoin", name: "Dogecoin", symbol: "DOGE", slug: "dogecoin" },
-  { id: "cardano", name: "Cardano", symbol: "ADA", slug: "cardano" },
-  { id: "tron", name: "TRON", symbol: "TRX", slug: "tron" }
-];
+  <div class="disclaimer">Prices are sourced from CoinGecko's free public API, which is cached for roughly 1–5 minutes.
+    This is not financial advice.</div>
 
-const CURRENCY_SYMBOLS = { usd: "$", gbp: "£", cad: "CA$", aud: "AU$" };
-let currentCurrency = "usd";
-let latestData = null;
-let lastFetchTime = null;
-let pollIntervalId = null;
+  <div class="ad-slot">
+    <div class="ad-slot-inner">Advertisement</div>
+  </div>
 
-function formatPrice(value, currency) {
-  if (value === undefined || value === null) return "—";
-  const symbol = CURRENCY_SYMBOLS[currency] || "";
-  if (value >= 1) {
-    return symbol + value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  } else if (value >= 0.01) {
-    return symbol + value.toFixed(4);
-  } else {
-    return symbol + value.toFixed(8);
-  }
-}
+  <div class="info-section">
+    <h2>Why we say "refreshed every minute," not "live"</h2>
+    <p>Many crypto price sites use the word "live" loosely. In practice, free-tier price data — including the data this
+      site uses — is typically cached for one to five minutes before it updates on the data provider's end. Polling more
+      frequently than that wouldn't give you fresher numbers; it would just waste requests. CoinPulse checks for new
+      data every 60 seconds and always shows you exactly when the price was last updated, so you can judge its freshness
+      yourself instead of taking "live" on faith.</p>
 
-function formatChange(value) {
-  if (value === undefined || value === null) return { text: "—", cls: "" };
-  const sign = value >= 0 ? "+" : "";
-  return { text: `${sign}${value.toFixed(2)}%`, cls: value >= 0 ? "up" : "down" };
-}
+    <h2>Where this data comes from</h2>
+    <p>Prices on CoinPulse are pulled directly from CoinGecko's public market data API, which aggregates prices across a
+      large number of exchanges worldwide. We don't run our own price feed or hold any cryptocurrency ourselves — we
+      simply display what CoinGecko's API reports, refreshed on the schedule described above.</p>
 
-function timeAgo(unixSeconds) {
-  if (!unixSeconds) return "—";
-  const diffSec = Math.floor(Date.now() / 1000 - unixSeconds);
-  if (diffSec < 60) return `${diffSec}s ago`;
-  if (diffSec < 3600) return `${Math.floor(diffSec / 60)}m ago`;
-  return `${Math.floor(diffSec / 3600)}h ago`;
-}
+    <h2>A note on currencies</h2>
+    <p>Switching the currency toggle changes the displayed price to US Dollars, British Pounds, Canadian Dollars, or
+      Australian Dollars, each converted using the exchange rate CoinGecko's API provides at the time of the request.
+    </p>
+  </div>
 
-function renderSkeleton() {
-  const tbody = document.getElementById('priceTableBody');
-  tbody.innerHTML = COINS.map((c, i) => `
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Tool</h4>
+        <a href="/">Dashboard</a>
+      </div>
+      <div class="footer-col">
+        <h4>Top Coins</h4>
+        <a href="/coin/bitcoin/">Bitcoin</a>
+        <a href="/coin/ethereum/">Ethereum</a>
+        <a href="/coin/xrp/">XRP</a>
+        <a href="/coin/solana/">Solana</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yearNow"></span> CoinPulse. Not financial advice.</span>
+      <span>Data via CoinGecko API.</span>
+    </div>
+  </footer>
+
+  <script>
+    const COINS = [
+      { id: "bitcoin", name: "Bitcoin", symbol: "BTC", slug: "bitcoin" },
+      { id: "ethereum", name: "Ethereum", symbol: "ETH", slug: "ethereum" },
+      { id: "tether", name: "Tether", symbol: "USDT", slug: "tether" },
+      { id: "ripple", name: "XRP", symbol: "XRP", slug: "xrp" },
+      { id: "binancecoin", name: "BNB", symbol: "BNB", slug: "bnb" },
+      { id: "solana", name: "Solana", symbol: "SOL", slug: "solana" },
+      { id: "usd-coin", name: "USDC", symbol: "USDC", slug: "usd-coin" },
+      { id: "dogecoin", name: "Dogecoin", symbol: "DOGE", slug: "dogecoin" },
+      { id: "cardano", name: "Cardano", symbol: "ADA", slug: "cardano" },
+      { id: "tron", name: "TRON", symbol: "TRX", slug: "tron" }
+    ];
+
+    const CURRENCY_SYMBOLS = { usd: "$", gbp: "£", cad: "CA$", aud: "AU$" };
+    let currentCurrency = "usd";
+    let latestData = null;
+    let lastFetchTime = null;
+    let pollIntervalId = null;
+
+    function formatPrice(value, currency) {
+      if (value === undefined || value === null) return "—";
+      const symbol = CURRENCY_SYMBOLS[currency] || "";
+      if (value >= 1) {
+        return symbol + value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      } else if (value >= 0.01) {
+        return symbol + value.toFixed(4);
+      } else {
+        return symbol + value.toFixed(8);
+      }
+    }
+
+    function formatChange(value) {
+      if (value === undefined || value === null) return { text: "—", cls: "" };
+      const sign = value >= 0 ? "+" : "";
+      return { text: `${sign}${value.toFixed(2)}%`, cls: value >= 0 ? "up" : "down" };
+    }
+
+    function timeAgo(unixSeconds) {
+      if (!unixSeconds) return "—";
+      const diffSec = Math.floor(Date.now() / 1000 - unixSeconds);
+      if (diffSec < 60) return `${diffSec}s ago`;
+      if (diffSec < 3600) return `${Math.floor(diffSec / 60)}m ago`;
+      return `${Math.floor(diffSec / 3600)}h ago`;
+    }
+
+    function renderSkeleton() {
+      const tbody = document.getElementById('priceTableBody');
+      tbody.innerHTML = COINS.map((c, i) => `
     <tr>
-      <td><div class="coin-cell"><span class="coin-rank">${i+1}</span><span class="coin-name">${c.name}</span><span class="coin-symbol">${c.symbol}</span></div></td>
+      <td><div class="coin-cell"><span class="coin-rank">${i + 1}</span><span class="coin-name">${c.name}</span><span class="coin-symbol">${c.symbol}</span></div></td>
       <td class="num"><span class="skeleton"></span></td>
       <td class="num"><span class="skeleton"></span></td>
       <td class="num hide-mobile"><span class="skeleton"></span></td>
     </tr>
   `).join('');
-}
+    }
 
-function renderTable() {
-  const tbody = document.getElementById('priceTableBody');
-  if (!latestData) { renderSkeleton(); return; }
+    function renderTable() {
+      const tbody = document.getElementById('priceTableBody');
+      if (!latestData) { renderSkeleton(); return; }
 
-  tbody.innerHTML = COINS.map((c, i) => {
-    const coinData = latestData[c.id];
-    if (!coinData) {
-      return `
+      tbody.innerHTML = COINS.map((c, i) => {
+        const coinData = latestData[c.id];
+        if (!coinData) {
+          return `
         <tr>
-          <td><div class="coin-cell"><span class="coin-rank">${i+1}</span><span class="coin-name">${c.name}</span><span class="coin-symbol">${c.symbol}</span></div></td>
+          <td><div class="coin-cell"><span class="coin-rank">${i + 1}</span><span class="coin-name">${c.name}</span><span class="coin-symbol">${c.symbol}</span></div></td>
           <td class="num">—</td><td class="num">—</td><td class="num hide-mobile">—</td>
         </tr>`;
-    }
-    const price = coinData[currentCurrency];
-    const change = coinData[currentCurrency + '_24h_change'];
-    const updatedAt = coinData['last_updated_at'];
-    const changeFmt = formatChange(change);
+        }
+        const price = coinData[currentCurrency];
+        const change = coinData[currentCurrency + '_24h_change'];
+        const updatedAt = coinData['last_updated_at'];
+        const changeFmt = formatChange(change);
 
-    return `
+        return `
       <tr onclick="window.location.href='/coin/${c.slug}/'">
-        <td><div class="coin-cell"><span class="coin-rank">${i+1}</span><span class="coin-name">${c.name}</span><span class="coin-symbol">${c.symbol}</span></div></td>
+        <td><div class="coin-cell"><span class="coin-rank">${i + 1}</span><span class="coin-name">${c.name}</span><span class="coin-symbol">${c.symbol}</span></div></td>
         <td class="num"><span class="price-main">${formatPrice(price, currentCurrency)}</span></td>
         <td class="num"><span class="change-pill ${changeFmt.cls}">${changeFmt.text}</span></td>
         <td class="num hide-mobile">${timeAgo(updatedAt)}</td>
       </tr>`;
-  }).join('');
-}
-
-function setStatus(state, text) {
-  const pill = document.getElementById('statusPill');
-  const statusText = document.getElementById('statusText');
-  pill.className = 'status-pill ' + state;
-  statusText.textContent = text;
-}
-
-let coldStartRetryCount = 0;
-const COLD_START_RETRY_DELAYS = [3000, 6000, 12000]; // 3s, 6s, 12s for ordinary blips (CORS hiccups, transient network errors)
-const RATE_LIMIT_RETRY_DELAY = 45000; // back off hard on an explicit 429 — retrying fast only makes it worse
-let coldStartRetryTimeoutId = null;
-let fetchInFlight = false;
-
-async function fetchPrices() {
-  if (fetchInFlight) return; // avoid overlapping calls if a retry and the normal interval line up
-  fetchInFlight = true;
-
-  const ids = COINS.map(c => c.id).join(',');
-  const url = `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd,gbp,cad,aud&include_24hr_change=true&include_last_updated_at=true`;
-
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      const err = new Error(`API responded with status ${response.status}`);
-      err.status = response.status;
-      throw err;
+      }).join('');
     }
-    const data = await response.json();
-    latestData = data;
-    lastFetchTime = Date.now();
-    coldStartRetryCount = 0; // reset once we succeed
-    if (coldStartRetryTimeoutId) {
-      clearTimeout(coldStartRetryTimeoutId);
-      coldStartRetryTimeoutId = null;
-    }
-    setStatus('live', 'Prices updated · checking again in 60s');
-    renderTable();
-  } catch (err) {
-    console.error('Price fetch failed:', err);
-    const isRateLimited = err.status === 429;
 
-    if (latestData) {
-      // Warm state: we already have data on screen, so just wait for the next normal 60s cycle.
-      // On a 429 specifically, skip even that — let the existing 60s interval handle it rather
-      // than scheduling anything extra that could add to the rate-limit pressure.
-      setStatus('stale', isRateLimited
-        ? 'Rate limited — showing last known prices, will resume shortly'
-        : 'Could not refresh — showing last known prices');
-    } else if (isRateLimited) {
-      // Cold start AND rate limited: do not fast-retry. Fast-retrying into a 429 is exactly
-      // the wrong move — it adds more requests to the same window that just got us limited.
-      // Wait a long, fixed delay instead, regardless of how many cold-start attempts we've made.
-      setStatus('error', 'Rate limited by the price API. Trying again in 45s...');
-      if (coldStartRetryTimeoutId) clearTimeout(coldStartRetryTimeoutId);
-      coldStartRetryTimeoutId = setTimeout(fetchPrices, RATE_LIMIT_RETRY_DELAY);
-    } else {
-      // Cold start, ordinary failure (CORS blip, network error, etc.): retry quickly a few times
-      // rather than leaving a first-time visitor staring at "Retrying..." for a full 60 seconds.
-      if (coldStartRetryCount < COLD_START_RETRY_DELAYS.length) {
-        const delay = COLD_START_RETRY_DELAYS[coldStartRetryCount];
-        coldStartRetryCount++;
-        setStatus('error', `Could not load prices. Retrying in ${Math.round(delay / 1000)}s...`);
-        coldStartRetryTimeoutId = setTimeout(fetchPrices, delay);
-      } else {
-        setStatus('error', 'Could not load prices. Will keep trying...');
+    function setStatus(state, text) {
+      const pill = document.getElementById('statusPill');
+      const statusText = document.getElementById('statusText');
+      pill.className = 'status-pill ' + state;
+      statusText.textContent = text;
+    }
+
+    let coldStartRetryCount = 0;
+    const COLD_START_RETRY_DELAYS = [3000, 6000, 12000]; // 3s, 6s, 12s for ordinary blips (CORS hiccups, transient network errors)
+    const RATE_LIMIT_RETRY_DELAY = 45000; // back off hard on an explicit 429 — retrying fast only makes it worse
+    let coldStartRetryTimeoutId = null;
+    let fetchInFlight = false;
+
+    async function fetchPrices() {
+      if (fetchInFlight) return; // avoid overlapping calls if a retry and the normal interval line up
+      fetchInFlight = true;
+
+      const ids = COINS.map(c => c.id).join(',');
+      const url = `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd,gbp,cad,aud&include_24hr_change=true&include_last_updated_at=true`;
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          const err = new Error(`API responded with status ${response.status}`);
+          err.status = response.status;
+          throw err;
+        }
+        const data = await response.json();
+        latestData = data;
+        lastFetchTime = Date.now();
+        coldStartRetryCount = 0; // reset once we succeed
+        if (coldStartRetryTimeoutId) {
+          clearTimeout(coldStartRetryTimeoutId);
+          coldStartRetryTimeoutId = null;
+        }
+        setStatus('live', 'Prices updated · checking again in 60s');
+        renderTable();
+      } catch (err) {
+        console.error('Price fetch failed:', err);
+        const isRateLimited = err.status === 429;
+
+        if (latestData) {
+          // Warm state: we already have data on screen, so just wait for the next normal 60s cycle.
+          // On a 429 specifically, skip even that — let the existing 60s interval handle it rather
+          // than scheduling anything extra that could add to the rate-limit pressure.
+          setStatus('stale', isRateLimited
+            ? 'Rate limited — showing last known prices, will resume shortly'
+            : 'Could not refresh — showing last known prices');
+        } else if (isRateLimited) {
+          // Cold start AND rate limited: do not fast-retry. Fast-retrying into a 429 is exactly
+          // the wrong move — it adds more requests to the same window that just got us limited.
+          // Wait a long, fixed delay instead, regardless of how many cold-start attempts we've made.
+          setStatus('error', 'Rate limited by the price API. Trying again in 45s...');
+          if (coldStartRetryTimeoutId) clearTimeout(coldStartRetryTimeoutId);
+          coldStartRetryTimeoutId = setTimeout(fetchPrices, RATE_LIMIT_RETRY_DELAY);
+        } else {
+          // Cold start, ordinary failure (CORS blip, network error, etc.): retry quickly a few times
+          // rather than leaving a first-time visitor staring at "Retrying..." for a full 60 seconds.
+          if (coldStartRetryCount < COLD_START_RETRY_DELAYS.length) {
+            const delay = COLD_START_RETRY_DELAYS[coldStartRetryCount];
+            coldStartRetryCount++;
+            setStatus('error', `Could not load prices. Retrying in ${Math.round(delay / 1000)}s...`);
+            coldStartRetryTimeoutId = setTimeout(fetchPrices, delay);
+          } else {
+            setStatus('error', 'Could not load prices. Will keep trying...');
+          }
+        }
+      } finally {
+        fetchInFlight = false;
       }
     }
-  } finally {
-    fetchInFlight = false;
-  }
-}
 
-document.querySelectorAll('.cur-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.cur-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentCurrency = btn.dataset.cur;
-    renderTable();
-  });
-});
+    document.querySelectorAll('.cur-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.cur-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCurrency = btn.dataset.cur;
+        renderTable();
+      });
+    });
 
-document.getElementById('yearNow').textContent = new Date().getFullYear();
+    document.getElementById('yearNow').textContent = new Date().getFullYear();
 
-renderSkeleton();
-fetchPrices();
-pollIntervalId = setInterval(fetchPrices, 60000);
-</script>
+    renderSkeleton();
+    fetchPrices();
+    pollIntervalId = setInterval(fetchPrices, 60000);
+  </script>
 
 </body>
+
 </html>
